@@ -2,19 +2,145 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>I Nostri Corsi - Centro Ippico del Golfo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Nostri Corsi | Centro Ippico del Golfo</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; background: #f4f4f4; }
-        header { background: #2c3e50; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; }
-        nav a { color: white; text-decoration: none; margin-left: 15px; }
-        .container { padding: 40px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .course-card { background: white; padding: 20px; border-left: 5px solid #d4af37; shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1 { text-align: center; margin-top: 40px; color: #2c3e50; }
+        /* Base e Font */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', 'Segoe UI', sans-serif; 
+            line-height: 1.6; 
+            background-color: #f8f9fa; 
+            color: #2c3e50; 
+        }
+
+        /* Navbar Coerente */
+        header { 
+            background: #1a1a1a; 
+            color: white; 
+            padding: 20px 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 800; letter-spacing: 2px; color: #d4af37; text-transform: uppercase; }
+
+        nav a { 
+            color: #eee; 
+            text-decoration: none; 
+            margin-left: 25px; 
+            font-size: 0.9rem; 
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: #d4af37; }
+
+        /* Hero Header Pagina */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('IMG_20251206_105321670_MFNR.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 { 
+            font-size: 3rem; 
+            text-transform: uppercase; 
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p { font-style: italic; opacity: 0.9; }
+
+        /* Container Corsi */
+        .container { 
+            padding: 80px 8%; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+
+        /* Card dei Corsi */
+        .course-card { 
+            background: white; 
+            padding: 40px 30px; 
+            border-radius: 20px;
+            border-bottom: 4px solid #d4af37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .course-card:hover { 
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .course-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .course-card h2 { 
+            font-size: 1.5rem; 
+            margin-bottom: 15px; 
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .course-card p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .btn-info {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .btn-info:hover {
+            background: #d4af37;
+            color: white;
+        }
+
+        /* Footer Semplice */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 10px; }
+            .page-header h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <div><strong>CENTRO IPPICO DEL GOLFO</strong></div>
+        <div class="logo">Centro Ippico</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="chi-siamo.html">Chi Siamo</a>
@@ -22,24 +148,53 @@
             <a href="contatti.html">Contatti</a>
         </nav>
     </header>
-    <h1>I nostri corsi</h1>
+
+    <div class="page-header">
+        <h1>I Nostri Corsi</h1>
+        <p>Percorsi formativi su misura tra sport e natura</p>
+    </div>
+
     <div class="container">
         <div class="course-card">
-            <h2>Volteggio Equestre</h2>
-            <p>Unica nel suo genere a Genova Nervi, questa disciplina unisce ginnastica e danza sul cavallo. Ottimo per l'equilibrio e la fiducia dei ragazzi.</p>
+            <div>
+                <span class="course-icon">🤸‍♂️</span>
+                <h2>Volteggio Equestre</h2>
+                <p>Unica nel suo genere a Genova Nervi, questa disciplina unisce ginnastica e danza sul cavallo. Ottimo per l'equilibrio e la fiducia dei ragazzi.</p>
+            </div>
+            <a href="contatti.html" class="btn-info">Scopri di più</a>
         </div>
+
         <div class="course-card">
-            <h2>Messa in Sella</h2>
-            <p>Lezioni individuali o per piccoli gruppi per chi vuole iniziare il percorso equestre partendo dalle basi.</p>
+            <div>
+                <span class="course-icon">🏇</span>
+                <h2>Messa in Sella</h2>
+                <p>Lezioni individuali o per piccoli gruppi per chi vuole iniziare il percorso equestre partendo dalle basi con istruttori qualificati.</p>
+            </div>
+            <a href="contatti.html" class="btn-info">Prenota prova</a>
         </div>
+
         <div class="course-card">
-            <h2>Scuola Pony</h2>
-            <p>Dedicata ai più piccoli per un approccio ludico e sicuro al mondo dei pony.</p>
+            <div>
+                <span class="course-icon">🐴</span>
+                <h2>Scuola Pony</h2>
+                <p>Dedicata ai più piccoli per un approccio ludico, sicuro e divertente al mondo dei mini-cavalli.</p>
+            </div>
+            <a href="contatti.html" class="btn-info">Area Bimbi</a>
         </div>
+
         <div class="course-card">
-            <h2>Lezioni Private</h2>
-            <p>Lezioni Private per più grandi con esperienza.</p>
+            <div>
+                <span class="course-icon">🏆</span>
+                <h2>Lezioni Private</h2>
+                <p>Per cavalieri esperti che desiderano perfezionare la tecnica o prepararsi per discipline specifiche.</p>
+            </div>
+            <a href="contatti.html" class="btn-info">Contattaci</a>
         </div>
     </div>
+
+    <footer>
+        &copy; 2026 Centro Ippico del Golfo - Genova Nervi
+    </footer>
+
 </body>
 </html>
