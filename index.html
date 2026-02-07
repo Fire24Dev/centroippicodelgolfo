@@ -13,20 +13,18 @@
             overflow: hidden;
         }
 
-        /* SFONDO CON IMMAGINE DI UN CAVALLO */
-        .hero {
-            /* Immagine pubblica di un cavallo */
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://unsplash.com/it/foto/cavallo-bianco-che-corre-lIeqGEdvex0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
+body {
+    /* Usa il nome del file che hai in cartella */
+    background-image: url('IMG_20251206_105321670_MFNR.jpg');
+    
+    /* Queste proprietà servono a rendere lo sfondo perfetto */
+    background-size: cover;         /* Copre tutto lo schermo */
+    background-position: center;    /* Centra la foto */
+    background-repeat: no-repeat;   /* Non ripete l'immagine */
+    background-attachment: fixed;   /* La foto resta ferma se scorri la pagina */
+    
+    margin: 0;
+    height: 100vh;                  /* Altezza totale della finestra */
         }
 
         h1 {
