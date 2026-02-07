@@ -2,20 +2,113 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Chi Siamo - Centro Ippico del Golfo</title>
-    <link rel="stylesheet" href="style.css"> <style>
-        /* Includo gli stili base qui per semplicità */
-        body { font-family: sans-serif; line-height: 1.6; color: #333; margin: 0; }
-        header { background: #2c3e50; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; }
-        nav a { color: white; text-decoration: none; margin-left: 15px; }
-        .content { padding: 50px 10%; max-width: 800px; margin: auto; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #d4af37; padding-bottom: 10px; }
-        .img-placeholder { background: #ddd; height: 300px; margin: 20px 0; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo | Centro Ippico del Golfo</title>
+    <style>
+        /* Base e Font elegante */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', 'Segoe UI', sans-serif; 
+            line-height: 1.8; 
+            color: #2c3e50; 
+            background-color: #fdfdfd; 
+        }
+
+        /* Navbar Moderna */
+        header { 
+            background: #1a1a1a; 
+            color: white; 
+            padding: 20px 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo { font-weight: 800; letter-spacing: 2px; color: #d4af37; text-transform: uppercase; }
+
+        nav a { 
+            color: #eee; 
+            text-decoration: none; 
+            margin-left: 25px; 
+            font-size: 0.9rem; 
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: #d4af37; }
+
+        /* Sezione Contenuto */
+        .container { 
+            max-width: 1100px; 
+            margin: 60px auto; 
+            padding: 0 20px; 
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Responsive: se lo schermo è piccolo, metti una colonna sola */
+        @media (max-width: 850px) {
+            .intro-grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 15px; }
+        }
+
+        .text-content h1 { 
+            font-size: 3rem; 
+            color: #1a1a1a; 
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .text-content h1 span { color: #d4af37; display: block; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; }
+
+        .text-content p { margin-bottom: 20px; font-size: 1.1rem; }
+
+        /* Immagine con cornice elegante */
+        .image-box { position: relative; }
+        
+        .main-img { 
+            width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 20px 20px 0px #d4af37; /* Cornice decorativa oro */
+            transition: transform 0.4s ease;
+        }
+
+        .main-img:hover { transform: scale(1.02); }
+
+        /* Filosofia Box */
+        .philosophy {
+            margin-top: 80px;
+            background: #1a1a1a;
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .philosophy h3 { 
+            color: #d4af37; 
+            font-size: 2rem; 
+            margin-bottom: 20px; 
+            text-transform: uppercase;
+        }
+
+        .philosophy p { max-width: 700px; margin: 0 auto; font-style: italic; font-size: 1.2rem; }
+
     </style>
 </head>
 <body>
+
     <header>
-        <div><strong>CENTRO IPPICO DEL GOLFO</strong></div>
+        <div class="logo">Centro Ippico</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="chi-siamo.html">Chi Siamo</a>
@@ -24,12 +117,23 @@
         </nav>
     </header>
 
-    <div class="content">
-        <h1>La nostra Storia</h1>
-        <p>Il Centro Ippico del Golfo nasce dalla passione per il mondo equestre e dal desiderio di creare un legame profondo tra uomo e natura nelle alture di Genova Nervi.</p>
-        <img src="IMG_20260109_153943620_HDR.jpg" alt="Centro Ippico Foto" style="width:70%; max-width:1000px;">
-        <h3>La nostra Filosofia</h3>
-        <p>Non siamo una semplice scuola di equitazione. Il nostro approccio si basa sul rispetto assoluto del cavallo. Crediamo che prima di montare in sella sia fondamentale capire il linguaggio dell'animale, imparare a prendersene cura e stabilire un rapporto di fiducia.</p>
+    <div class="container">
+        <div class="intro-grid">
+            <div class="text-content">
+                <h1><span>La nostra Storia</span>Passione tra Cielo e Mare</h1>
+                <p>Il <strong>Centro Ippico del Golfo</strong> nasce dalla passione per il mondo equestre e dal desiderio di creare un legame profondo tra uomo e natura nelle alture di Genova Nervi.</p>
+                <p>Immersi nella macchia mediterranea, offriamo un'esperienza unica dove il rumore degli zoccoli si fonde con il profumo della salsedine.</p>
+            </div>
+            <div class="image-box">
+                <img src="IMG_20260109_153943620_HDR.jpg" alt="Centro Ippico Foto" class="main-img">
+            </div>
+        </div>
+
+        <section class="philosophy">
+            <h3>La nostra Filosofia</h3>
+            <p>"Non siamo una semplice scuola di equitazione. Il nostro approccio si basa sul rispetto assoluto del cavallo. Crediamo che prima di montare in sella sia fondamentale capire il linguaggio dell'animale e stabilire un rapporto di fiducia."</p>
+        </section>
     </div>
+
 </body>
 </html>
