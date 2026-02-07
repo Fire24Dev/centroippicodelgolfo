@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Ippico del Golfo | Home</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* SFONDO CON IMMAGINE DI UN CAVALLO */
+        .hero {
+            /* Immagine pubblica di un cavallo */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=2071&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem); /* Si ridimensiona su mobile */
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            padding: 0 20px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .btn {
+            background: #d4af37; /* Oro */
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn:hover {
+            background: white;
+            color: #2c3e50;
+            transform: translateY(-3px);
+        }
+
+        .location-tag {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: rgba(0,0,0,0.6);
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Centro Ippico del Golfo</h1>
+        
+        <div class="nav-buttons">
+            <a href="chi-siamo.html" class="btn">Chi Siamo</a>
+            <a href="corsi.html" class="btn">I Nostri Corsi</a>
+            <a href="contatti.html" class="btn">Contatti</a>
+        </div>
+
+        <div class="location-tag">
+            Genova Nervi • Sant'Ilario
+        </div>
+    </div>
+
+</body>
+</html>
