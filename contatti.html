@@ -2,21 +2,141 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Contattaci - Centro Ippico del Golfo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti | Centro Ippico del Golfo</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; }
-        header { background: #2c3e50; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; }
-        nav a { color: white; text-decoration: none; margin-left: 15px; }
-        .container { padding: 50px 10%; display: flex; flex-wrap: wrap; gap: 50px; }
-        .info, .form-box { flex: 1; min-width: 300px; }
-        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; }
-        button { background: #2c3e50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
-        button:hover { background: #d4af37; }
+        /* Base e Font */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', 'Segoe UI', sans-serif; 
+            line-height: 1.6; 
+            background-color: #fdfdfd; 
+            color: #2c3e50; 
+        }
+
+        /* Navbar Coerente */
+        header { 
+            background: #1a1a1a; 
+            color: white; 
+            padding: 20px 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 800; letter-spacing: 2px; color: #d4af37; text-transform: uppercase; }
+
+        nav a { 
+            color: #eee; 
+            text-decoration: none; 
+            margin-left: 25px; 
+            font-size: 0.9rem; 
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: #d4af37; }
+
+        /* Contenitore Principale */
+        .main-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        @media (max-width: 850px) {
+            .main-container { grid-template-columns: 1fr; }
+        }
+
+        /* Sezione Info */
+        .info-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            border-left: 5px solid #d4af37;
+            padding-left: 20px;
+        }
+
+        .contact-details { margin-bottom: 40px; }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: #f0ece2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* Sezione Social & Azioni */
+        .social-box {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .social-box h3 { color: #d4af37; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-social {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .btn-insta:hover { background: #E1306C; border-color: #E1306C; }
+        .btn-fb:hover { background: #4267B2; border-color: #4267B2; }
+
+        /* Mappa Placeholder */
+        .map-box {
+            width: 100%;
+            height: 300px;
+            background: #eee;
+            border-radius: 15px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            border: 1px solid #ddd;
+        }
+
     </style>
 </head>
 <body>
+
     <header>
-        <div><strong>CENTRO IPPICO DEL GOLFO</strong></div>
+        <div class="logo">Centro Ippico</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="chi-siamo.html">Chi Siamo</a>
@@ -25,24 +145,52 @@
         </nav>
     </header>
 
-    <div class="container">
-        <div class="info">
-            <h1>Dove trovarci</h1>
-            <p><strong>Indirizzo:</strong> Via Costa di Cantalupo 7A, 16167 Genova (GE)</p>
-            <p><strong>Telefono:</strong> +39 345 134 4671</p>
-            <p><strong>Email:</strong> info@centroippicodelgolfo.it</p>
-            <p><em>Siamo a pochi minuti dal casello di Genova Nervi, seguendo le indicazioni per Sant'Ilario con le frecce verso il centro ippico del golfo.</em></p>
-        </div>
-        <form action="https://www.instagram.com/centroippicodelgolfo?igsh=MWJ1YnNlemtkOGFweA==">
-    <button type="submit">Instagram</button>
-</form>
-       <form action="https://www.facebook.com/61555528561316/?locale=it_IT">
-    <button type="submit">Facebook</button>
-</form>
-
-
-
+    <div class="main-container">
         
+        <div class="info-section">
+            <h1>Dove Trovarci</h1>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <p>Via Costa di Cantalupo 7A, 16167 Genova</p>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <p>+39 345 134 4671</p>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span>
+                    <p>info@centroippicodelgolfo.it</p>
+                </div>
+            </div>
+            
+            <p style="font-style: italic; color: #666;">
+                Siamo a pochi minuti dal casello di Genova Nervi. Segui le indicazioni per Sant'Ilario e troverai le nostre frecce direzionali.
+            </p>
+
+            <div class="map-box">
+                <p>Google Maps Area</p>
+            </div>
+        </div>
+
+        <div class="social-side">
+            <div class="social-box">
+                <h3>Seguici sui Social</h3>
+                <p style="margin-bottom: 30px; opacity: 0.8;">Resta aggiornato sulle nostre attività e guarda le foto dei nostri cavalli.</p>
+                
+                <div class="btn-group">
+                    <a href="https://www.instagram.com/centroippicodelgolfo" target="_blank" class="btn-social btn-insta">Instagram</a>
+                    <a href="https://www.facebook.com/61555528561316" target="_blank" class="btn-social btn-fb">Facebook</a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; border: 1px dashed #d4af37; border-radius: 15px; text-align: center;">
+                <p><strong>Orari:</strong> Su appuntamento</p>
+                <p>Ti aspettiamo per una visita al maneggio!</p>
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>
